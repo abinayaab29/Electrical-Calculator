@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    tools:context=".Amp_kw">
+
+
+    <TextView
+        android:id="@+id/type"
+        android:layout_width="149dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="44dp"
+        android:fontFamily="casual"
+        android:text="Select current type:"
+        android:textColor="@color/light_blue_50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/sp1"
+        android:layout_width="101dp"
+        android:layout_height="29dp"
+        android:layout_marginTop="44dp"
+        android:layout_marginEnd="84dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/v1"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+
+        android:fontFamily="casual"
+
+        android:text="Enter current in amps:"
+        android:textColor="@color/light_blue_50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/type" />
+
+    <EditText
+        android:id="@+id/ed"
+        android:layout_width="115dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/v1"
+        app:layout_constraintTop_toBottomOf="@+id/sp1" />
+
+    <TextView
+        android:id="@+id/v2"
+        android:layout_width="150dp"
+        android:layout_height="37dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="40dp"
+        android:fontFamily="casual"
+        android:text="Enter voltage in volts:"
+        android:textColor="@color/light_blue_50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v1" />
+
+    <EditText
+        android:id="@+id/ed2"
+        android:layout_width="123dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="56dp"
+        android:ems="10"
+        android:fontFamily="sans-serif"
+        android:inputType="number"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/v2"
+        app:layout_constraintTop_toBottomOf="@+id/ed" />
+
+    <Button
+        android:id="@+id/amp_kw"
+        android:layout_width="142dp"
+        android:layout_height="39dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="64dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="Calculate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="105dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="56dp"
+        android:backgroundTint="@color/black"
+        android:fontFamily="sans-serif-medium"
+        android:text="Reset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.847"
+        app:layout_constraintStart_toEndOf="@+id/amp_kw"
+        app:layout_constraintTop_toBottomOf="@+id/ed2" />
+
+    <TextView
+        android:id="@+id/res1"
+        android:layout_width="141dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="casual"
+        android:text="Result in kw"
+        android:textColor="@color/light_blue_50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/amp_kw" />
+
+    <TextView
+        android:id="@+id/res2"
+        android:layout_width="133dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:fontFamily="casual"
+        android:text="Result in watts"
+        android:textColor="@color/light_blue_50"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/res1" />
+
+    <TextView
+        android:id="@+id/ans1"
+        android:layout_width="88dp"
+        android:layout_height="32dp"
+        android:layout_marginStart="58dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="84dp"
+        android:fontFamily="@font/architects_daughter"
+        android:hint="answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/res1"
+        app:layout_constraintTop_toBottomOf="@+id/reset" />
+
+    <TextView
+        android:id="@+id/ans2"
+        android:layout_width="98dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="72dp"
+        android:fontFamily="@font/architects_daughter"
+        android:hint="answer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.987"
+        app:layout_constraintStart_toEndOf="@+id/res2"
+        app:layout_constraintTop_toBottomOf="@+id/ans1" />
+
+    <EditText
+        android:id="@+id/pf1"
+        android:layout_width="106dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="65dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:ems="10"
+        android:inputType="numberDecimal|number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/pf"
+        app:layout_constraintTop_toBottomOf="@+id/ed2" />
+
+    <TextView
+        android:id="@+id/pf"
+        android:layout_width="149dp"
+        android:layout_height="31dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="casual"
+        android:text="Power Factor"
+        android:textColor="@color/light_blue_50"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/v2" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
